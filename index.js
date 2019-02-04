@@ -51,7 +51,7 @@ function success(data) {
     }
 }
 
-await loadDict();
+
 
 const MOBILENET_MODEL_PATH =
     // tslint:disable-next-line:max-line-length
@@ -94,7 +94,7 @@ const mobilenetDemo = async () => {
  */
 async function predict(imgElement) {
   status('Predicting...');
-
+  await loadDict();   
   const startTime = performance.now();
   const logits = tf.tidy(() => {
     // tf.fromPixels() returns a Tensor from an image element.
