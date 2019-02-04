@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import {IMAGENET_CLASSES} from './model/class_names.txt';
+import {IMAGENET_CLASSES} from 'model/class_names.txt';
 
 const MOBILENET_MODEL_PATH =
     // tslint:disable-next-line:max-line-length
