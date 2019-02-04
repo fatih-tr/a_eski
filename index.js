@@ -16,6 +16,43 @@
  */
 
 var IMAGENET_CLASSES = [];
+
+/*
+get the the class names 
+*/
+function getClassNames(indices) {
+    var outp = []
+    for (var i = 0; i < indices.length; i++)
+        outp[i] = IMAGENET_CLASSES[indices[i]]
+    return outp
+}
+
+/*
+load the class names 
+*/
+async function loadDict() {
+    
+        loc = 'model/class_names.txt'
+    
+    await $.ajax({
+        url: loc,
+        dataType: 'text',
+    }).done(success);
+}
+
+/*
+load the class names
+*/
+function success(data) {
+    const lst = data.split(/\n/)
+    for (var i = 0; i < lst.length - 1; i++) {
+        let symbol = lst[i]
+        IMAGENET_CLASSES[i] = symbol
+    }
+}
+
+await loadDict();
+
 const MOBILENET_MODEL_PATH =
     // tslint:disable-next-line:max-line-length
     'model/model.json';
@@ -118,39 +155,6 @@ export async function getTopKClasses(logits, topK) {
 
 //
 // UI
-/*
-get the the class names 
-*/
-function getClassNames(indices) {
-    var outp = []
-    for (var i = 0; i < indices.length; i++)
-        outp[i] = IMAGENET_CLASSES[indices[i]]
-    return outp
-}
-
-/*
-load the class names 
-*/
-async function loadDict() {
-    
-        loc = 'model/class_names.txt'
-    
-    await $.ajax({
-        url: loc,
-        dataType: 'text',
-    }).done(success);
-}
-
-/*
-load the class names
-*/
-function success(data) {
-    const lst = data.split(/\n/)
-    for (var i = 0; i < lst.length - 1; i++) {
-        let symbol = lst[i]
-        IMAGENET_CLASSES[i] = symbol
-    }
-}
 
 function showResults(imgElement, classes) {
   const predictionContainer = document.createElement('div');
@@ -213,5 +217,5 @@ const demoStatusElement = document.getElementById('status');
 const status = msg => demoStatusElement.innerText = msg;
 
 const predictionsElement = document.getElementById('predictions');
-await loadDict();
+
 mobilenetDemo();
