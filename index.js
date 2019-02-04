@@ -118,7 +118,7 @@ export async function getTopKClasses(logits, topK) {
 
 //
 // UI
-//
+/*
 get the the class names 
 */
 function getClassNames(indices) {
