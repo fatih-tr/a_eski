@@ -17,13 +17,13 @@
 
 import * as tf from '@tensorflow/tfjs';
 
-import {IMAGENET_CLASSES} from './imagenet_classes';
+import {IMAGENET_CLASSES} from './model/class_names.txt';
 
 const MOBILENET_MODEL_PATH =
     // tslint:disable-next-line:max-line-length
-    'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json';
+    './model/model.json';
 
-const IMAGE_SIZE = 224;
+const IMAGE_SIZE = 299;
 const TOPK_PREDICTIONS = 10;
 
 let mobilenet;
