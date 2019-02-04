@@ -15,8 +15,6 @@
  * =============================================================================
  */
 
-*/import * as tf from '@tensorflow/tfjs';
-
 import {IMAGENET_CLASSES} from './model/class_names.txt';
 
 const MOBILENET_MODEL_PATH =
