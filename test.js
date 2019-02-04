@@ -6,7 +6,7 @@ load the class names
 */
 async function loadDict() {
   
-    loc = 'model2/class_names.txt'
+    loc = 'model/class_names.txt'
     console.log(loc)
     await $.ajax({
         url: loc,
@@ -68,7 +68,7 @@ function preprocess(img)
     //convert the image data to a tensor 
     let tensor = tf.fromPixels(img)
     //resize to 50 X 50
-    const resized = tf.image.resizeBilinear(tensor, [50, 50]).toFloat()
+    const resized = tf.image.resizeBilinear(tensor, [299, 299]).toFloat()
     // Normalize the image 
     const offset = tf.scalar(255.0);
     const normalized = tf.scalar(1.0).sub(resized.div(offset));
@@ -82,7 +82,7 @@ get the prediction
 */
 function predict(imgData) {
         
-        var class_names = ['NO_IDC','Contains_IDC']
+        var class_names = ['Altpleno', 'Black Negra Collena', 'Hvalhvas', 'Kankolla', 'RedRojo', 'Salcedo', 'Santa Ana', 'Yellow Armerilla Demorongoni', 'Yelow Armerilla SacoCO', 'İlpainia'] 
         //get the prediction 
         var pred = model.predict(preprocess(imgData)).dataSync()
         console.log(pred)            
