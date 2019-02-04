@@ -18,7 +18,10 @@ limitations under the License.
 <!doctype html>
 
 <head>
- 
+  <title>TensorFlow.js: Using a pretrained MobileNet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../shared/tfjs-examples.css" />
 </head>
 
 <style>
@@ -48,13 +51,18 @@ limitations under the License.
 <body>
   <div class="tfjs-example-container">
     <section class='title-area'>
-      <h1>Kinoa Image Classification based Deep Learning</h1>
+      <h1>TensorFlow.js: Using a pretrained MobileNet</h1>
     </section>
 
     <section>
       <p class='section-head'>Description</p>
       <p>
-       
+        This demo uses the pretrained MobileNet_25_224 model from Keras which you can find
+        <a href="https://github.com/fchollet/deep-learning-models/releases/download/v0.6/mobilenet_2_5_224_tf.h5">here</a>.
+
+        It is not trained to recognize human faces. For best performance, upload images of objects
+        like piano, coffee mugs, bottles, etc. You can see all the objects types it has been trained to recognize in <a
+          href="https://github.com/tensorflow/tfjs-examples/blob/master/mobilenet/imagenet_classes.js">imagenet_classes.js</a>.
       </p>
     </section>
 
@@ -72,7 +80,7 @@ limitations under the License.
 
       <div id="predictions"></div>
 
-      <img style="display: none" id="cat" src="cat.jpg" width=224 height=224 />
+      <img style="display: none" id="cat" src="cat.jpg" width=299 height=299 />
     </section>
 
     <script src="index.js"></script>
