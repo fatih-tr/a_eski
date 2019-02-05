@@ -42,6 +42,12 @@
         }
     });
 });
+    
+ async function foo(){
+    model = await tf.loadModel('model2/model.json')
+    document.getElementById('status').innerHTML = 'Model Yüklendi';
+ }
+    
  function clearFileInput(id) 
 { 
     var oldInput = document.getElementById(id); 
@@ -98,9 +104,7 @@ clearFileInput("files");
      reader.readAsDataURL(f);
    }
  }
-    model = await tf.loadModel('model2/model.json')
-        
-    document.getElementById('status').innerHTML = 'Model Yüklendi';
+ foo()
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 </body>
