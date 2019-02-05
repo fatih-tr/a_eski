@@ -162,7 +162,7 @@ async function start(img) {
     //load the model 
     model = await tf.loadModel('model2/model.json')
         
-    document.getElementById('status').innerHTML = 'Model Loaded';
+    document.getElementById('status').innerHTML = 'Model Yüklendi';
         
     predict(img)
     
