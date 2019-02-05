@@ -68,7 +68,12 @@ function preprocess(img)
     //convert the image data to a tensor 
     let tensor = tf.fromPixels(img)
     //resize to 50 X 50
-    const resized = tf.image.resizeBilinear(tensor, [299, 299]).toFloat()
+    var yourImg = document.getElementById('thumb');
+	if(yourImg.style.height>600 && yourImg.style.width>600) {
+		tensor = tf.image.crop_and_resize(tensor, boxes=[[0.0, 0.0, 600, 600]], crop_size=[299, 299], box_ind=[0])
+	}
+ 
+    // const resized = tf.image.resizeBilinear(tensor, [299, 299]).toFloat()
     // Normalize the image 
     const offset = tf.scalar(255.0);
     //const normalized = tf.scalar(1.0).sub(resized.div(offset));
