@@ -91,7 +91,8 @@ clearFileInput("files");
          var span = document.createElement('span');
          span.innerHTML = ['<img class="thumb" src="', e.target.result,
                            '" title="', escape(theFile.name), '"/>'].join('');
-         document.getElementById('list').insertBefore(span, null);
+         //document.getElementById('list').insertBefore(span, null);
+         document.getElementById("list").src = span;
        };
      })(f);
 
@@ -100,7 +101,7 @@ clearFileInput("files");
    }
  }
 
- document.getElementById('files').addEventListener('change', handleFileSelect, false);
+ document.getElementById('files').addEventListener('change', handleFileSelect, True);
 </script>
 //<div>
 //    <p><b>Note:</b> Only one Image can be uploaded at one time</p>
