@@ -71,9 +71,9 @@ function preprocess(img)
     var yourImg = document.getElementById('thumb');
 	//console.log(yourImg.height)	
 	console.log(img.height)	
-	// if(yourImg.style.height>600 && yourImg.style.width>600) {
-	//	tensor = tf.image.crop_and_resize(tensor, boxes=[[0.0, 0.0, 600, 600]], crop_size=[299, 299], box_ind=[0])
-	//}
+	if(img.height>600 && img.width>600) {
+		tensor = tf.image.crop_and_resize(tensor, boxes=[[0.0, 0.0, 600, 600]], crop_size=[299, 299], box_ind=[0])
+	}
  
     // const resized = tf.image.resizeBilinear(tensor, [299, 299]).toFloat()
     // Normalize the image 
