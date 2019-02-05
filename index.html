@@ -57,7 +57,7 @@
     // TODO: copy any other relevant attributes 
 
     oldInput.parentNode.replaceChild(newInput, oldInput); 
-    document.getElementById('list').clear;
+    document.getElementById('list').replaceChild(newInput, oldInput);
 }    
 </script>     
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
