@@ -19,20 +19,21 @@
 <div class="container-fluid"> 
 
 <blockquote class="blockquote text-justify" style="margin:30px;">
- <p> Bu sınıflandırıcı ile 10 adet sınıfta kinoa tohumları sınıflandırılabilir. Model 93.9% doğruluk oranında kinoa resimlerini tahmin edebilmektedir.</p>
+ <p> Bu sınıflandırıcı ile 10 adet sınıfta kinoa tohumları sınıflandırılabilir. Model 93.9% doğruluk oranında kinoa resimlerini tahmin edebilmektedir.     
+<div class="col" style ='margin-left:100px;'>
+<h4 id ='status' >Model Yükleniyor... </h4>
+</div>   
+ </p>
     <footer class="blockquote-footer"></footer>
   </blockquote>
 
 </div>
     
 <div>
-<p id = "Result" align="center"></p>
+<p id = "Result" align="center"><font face="Tahoma" size="4" color="red">..</font></p>
 <p id = "Probability"></p>
 </div>
-    
-<div class="col" style ='margin-left:100px;'>
-<h4 id ='status' >Model Yükleniyor... </h4>
-</div>
+
 <img id="myimage" height="50">
 
 </div>
@@ -60,10 +61,12 @@
 
     oldInput.parentNode.replaceChild(newInput, oldInput); 
 }    
-</script>     
+</script>   
+<p align="center">
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
 <output id="list"></output>
 <button type="button" value="Submit" onclick = "start()">submit</button>
+</p>
 <script>
 clearFileInput("files");
 </script>    
