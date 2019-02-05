@@ -57,6 +57,7 @@
     // TODO: copy any other relevant attributes 
 
     oldInput.parentNode.replaceChild(newInput, oldInput); 
+    document.getElementById('list').clear;
 }    
 </script>     
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
@@ -91,8 +92,7 @@ clearFileInput("files");
          var span = document.createElement('span');
          span.innerHTML = ['<img class="thumb" src="', e.target.result,
                            '" title="', escape(theFile.name), '"/>'].join('');
-         //document.getElementById('list').insertBefore(span, null);
-         document.getElementById("list").src = span;
+         document.getElementById('list').insertBefore(span, null);
        };
      })(f);
 
@@ -101,7 +101,7 @@ clearFileInput("files");
    }
  }
 
- document.getElementById('files').addEventListener('change', handleFileSelect, True);
+ document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 //<div>
 //    <p><b>Note:</b> Only one Image can be uploaded at one time</p>
