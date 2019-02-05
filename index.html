@@ -38,7 +38,11 @@
         if (parseInt($fileUpload.get(0).files.length)>1){
          alert("You can only upload a maximum of 1 files");
         }
-    });    
+    });
+      $("#files").change(function() {
+        clearFileInput("files")  
+        renderImage(this.files[0]);
+        }
 });
  function clearFileInput(id) 
 { 
