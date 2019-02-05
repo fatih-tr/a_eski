@@ -19,10 +19,8 @@
 <div class="container-fluid"> 
 
 <blockquote class="blockquote text-justify" style="margin:30px;">
- <p> Bu sınıflandırıcı ile 10 adet sınıfta kinoa tohumları sınıflandırılabilir. Model 93.9% doğruluk oranında kinoa resimlerini tahmin edebilmektedir.     
-<div class="col" style ='margin-left:100px;'>
-<h4 id ='status' >Model Yükleniyor... </h4>
-</div>   
+ <p align="center"> Bu sınıflandırıcı ile 10 adet sınıfta kinoa tohumları sınıflandırılabilir. Model 93.9% doğruluk oranında kinoa resimlerini tahmin edebilmektedir.     
+ <h4 id ='status' >Model Yükleniyor... </h4>  
  </p>
     <footer class="blockquote-footer"></footer>
   </blockquote>
@@ -30,7 +28,9 @@
 </div>
     
 <div>
-<p id = "Result" align="center"><font face="Tahoma" size="4" color="red">..</font></p>
+<font face="Tahoma" size="4" color="red">
+<p id = "Result" align="center"></p>
+</font>
 <p id = "Probability"></p>
 </div>
 
@@ -91,7 +91,7 @@ clearFileInput("files");
        return function(e) {
          // Render thumbnail.
          var span = document.createElement('span');
-         span.innerHTML = ['<img class="thumb" src="', e.target.result,
+         span.innerHTML = ['<img height="150" width="150" class="thumb" src="', e.target.result,
                            '" title="', escape(theFile.name), '"/>'].join('');
          document.getElementById('list').insertBefore(span, null);
        };
