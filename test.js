@@ -82,8 +82,7 @@ function preprocess(img)
 get the prediction 
 */
 function predict(imgData) {
-        
-        var class_names = ['Altpleno', 'Black Negra Collena', 'Hvalhvas', 'Kankolla', 'RedRojo', 'Salcedo', 'Santa Ana', 'Yellow Armerilla Demorongoni', 'Yelow Armerilla SacoCO', 'İlpainia'] 
+        var class_names = ['İnia 431 Altpleno', 'Black Negra Collena', 'Hvalhvas', 'Kankolla', 'RedRojo', 'Salcedo', 'İnia Santa Ana', 'Yellow Armerilla Demorongoni', 'Yelow Armerilla SacoCO', 'İlpainia'] 
         //get the prediction 
         var pred = model.predict(preprocess(imgData)).dataSync()
         console.log(pred)            
@@ -114,7 +113,7 @@ async function start(){
         
         var status = document.getElementById('status')
       
-        status.innerHTML = 'Model Loaded'
+        status.innerHTML = 'Model Yüklendi'
         
         //document.getElementById('status').innerHTML = 'Model Loaded';
       
