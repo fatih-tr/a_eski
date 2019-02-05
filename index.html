@@ -98,7 +98,9 @@ clearFileInput("files");
      reader.readAsDataURL(f);
    }
  }
-
+    model = await tf.loadModel('model2/model.json')
+        
+    document.getElementById('status').innerHTML = 'Model Yüklendi';
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 </body>
