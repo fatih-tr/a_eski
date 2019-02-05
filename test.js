@@ -69,7 +69,7 @@ function preprocess(img)
     let tensor = tf.fromPixels(img)
     //resize to 50 X 50
     var yourImg = document.getElementById('thumb');
-	console.log(yourImg.height)	
+	//console.log(yourImg.height)	
 	console.log(img.height)	
 	// if(yourImg.style.height>600 && yourImg.style.width>600) {
 	//	tensor = tf.image.crop_and_resize(tensor, boxes=[[0.0, 0.0, 600, 600]], crop_size=[299, 299], box_ind=[0])
