@@ -74,7 +74,6 @@ clearFileInput("files");
   
  function handleFileSelect(evt) {
    var files = evt.target.files; // FileList object
-   clearFileInput("files");
    // Loop through the FileList and render image files as thumbnails.
    for (var i = 0, f; f = files[i]; i++) {
 
@@ -101,7 +100,7 @@ clearFileInput("files");
    }
  }
 
- document.getElementById('files').addEventListener('change', handleFileSelect, false);
+ document.getElementById('files').addEventListener('change', handleFileSelect, true);
 </script>
 //<div>
 //    <p><b>Note:</b> Only one Image can be uploaded at one time</p>
