@@ -24,10 +24,12 @@
   </blockquote>
 
 </div>
-    <div>
-<p id = "Result"></p>
+    
+<div>
+<p id = "Result" align="center"></p>
 <p id = "Probability"></p>
 </div>
+    
 <div class="col" style ='margin-left:100px;'>
 <h4 id ='status' >Model Yükleniyor... </h4>
 </div>
@@ -42,9 +44,6 @@
          alert("You can only upload a maximum of 1 files");
         }
     });
-     // $("#files").change(function() {
-     //   clearFileInput("files")  
-     //   });
 });
  function clearFileInput(id) 
 { 
@@ -60,16 +59,11 @@
     // TODO: copy any other relevant attributes 
 
     oldInput.parentNode.replaceChild(newInput, oldInput); 
-    document.getElementById('list').replaceChild(newInput, oldInput);
 }    
 </script>     
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
 <output id="list"></output>
 <button type="button" value="Submit" onclick = "start()">submit</button>
-//<div>
-//<p id = "Result"></p>
-//<p id = "Probability"></p>
-//</div>
 <script>
 clearFileInput("files");
 </script>    
@@ -107,8 +101,8 @@ clearFileInput("files");
 
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
-//<div>
-//    <p><b>Note:</b> Only one Image can be uploaded at one time</p>
-//</div>    
+<div>
+    <p><b>Note:</b> Only one Image can be uploaded at one time</p>
+</div>    
 </body>
 </html>
