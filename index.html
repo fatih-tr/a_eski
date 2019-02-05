@@ -20,7 +20,6 @@
 
 <blockquote class="blockquote text-justify" style="margin:30px;">
  <p align="center"> Bu sınıflandırıcı ile 10 adet sınıfta kinoa tohumları sınıflandırılabilir. Model 93.9% doğruluk oranında kinoa resimlerini tahmin edebilmektedir.     
- <h4 id ='status' >Model Yükleniyor... </h4>  
  </p>
     <footer class="blockquote-footer"></footer>
   </blockquote>
@@ -66,6 +65,7 @@
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
 <output id="list"></output>
 <button type="button" value="Submit" onclick = "start()">submit</button>
+<h4 align="center" id ='status' >Model Yükleniyor... </h4>  
 </p>
 <script>
 clearFileInput("files");
@@ -104,8 +104,5 @@ clearFileInput("files");
 
  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
-<div>
-    <p><b>Note:</b> Only one Image can be uploaded at one time</p>
-</div>    
 </body>
 </html>
