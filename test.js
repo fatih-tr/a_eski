@@ -64,17 +64,15 @@ function findIndicesOfMax(inp, count) {
 }
 function preprocess(img)
 {
-
-    //convert the image data to a tensor 
-    let tensor = tf.fromPixels(img)
-    //resize to 50 X 50
-    var yourImg = document.getElementById('thumb');
-	//console.log(yourImg.height)	
 	console.log(img.height)	
 	if(img.height>600 && img.width>600) {
-		tensor = tf.image.crop_and_resize(tensor, boxes=[[0.0, 0.0, 600, 600]], crop_size=[299, 299], box_ind=[0]).toFloat()
+		img.height=299
+		img.width=299
 	}
  	console.log(img.height)
+    //convert the image data to a tensor 
+    let tensor = tf.fromPixels(img)
+    //resize to 50 X 50	
     // const resized = tf.image.resizeBilinear(tensor, [299, 299]).toFloat()
     // Normalize the image 
     const offset = tf.scalar(255.0);
