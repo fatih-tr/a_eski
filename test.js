@@ -110,20 +110,6 @@ function predict(imgData) {
     
   }
 
-function loadDemoImage() {
-	//document.getElementById("predict-box").style.display = "table-cell";
-  	//document.getElementById("prediction").innerHTML = "Click predict to find my label!";
-	//document.getElementById("select-file-box").style.display = "table-cell";
-	document.getElementById("predict-list").innerHTML = "";
-
-	base_path = "b/dataset/test/test_image_"
-	maximum = 4;
-	minimum = 1;
-	var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-	img_path = base_path + randomnumber + ".jpg"
-	document.getElementById("thumb").src = img_path;
-}
-
 async function start(){
 	//img = document.getElementById('image').files[0];
 	
