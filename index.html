@@ -16,8 +16,6 @@
 <!-- <script src = "main.css" > </script> -->
 </head>
 <body>
-    <button id="use">Upload</button>
-<img id="result" src="">
     
 <h1 align="center">KİNOA SINIFLANDIRICI</h1>   
 <h4 align="center" id ='status' >Model Yükleniyor... </h4> 
@@ -73,6 +71,7 @@
 <input type="file" id="files" name="files[]" accept=".jpg, .jpeg, .png"/>
 <output id="list"></output>
 <button type="button" value="Submit" onclick = "start()">submit</button> 
+<button id="demo-image-button" class="input-button" onclick="loadDemoImage()">Veritabanından rastgele resim yükle</button>
 </p>
 <script>
 clearFileInput("files");
